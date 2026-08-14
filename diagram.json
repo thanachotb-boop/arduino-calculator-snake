@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 154.2, "left": -58.2, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -280.4, "left": -52, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 457.6,
+      "left": 92,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.2", "lcd1:GND", "black", [ "v57.5", "h-82.5", "v76.8" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-86.4", "v-115.1", "h96" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-115.2", "v-105.4", "h201.6" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h-134.4", "v-134.1", "h240" ] ],
+    [ "uno:2", "keypad1:R1", "green", [ "v-57.6", "h-130.3" ] ],
+    [ "keypad1:R2", "uno:3", "green", [ "v57.6", "h105.2" ] ],
+    [ "keypad1:R3", "uno:4", "green", [ "v76.8", "h95.7" ] ],
+    [ "keypad1:R4", "uno:5", "green", [ "v86.4", "h76.6" ] ],
+    [ "keypad1:C1", "uno:6", "green", [ "v67.2", "h57.5" ] ],
+    [ "keypad1:C2", "uno:7", "green", [ "v86.4", "h28.8" ] ],
+    [ "uno:8", "keypad1:C3", "green", [ "v-76.8", "h-9.2" ] ],
+    [ "keypad1:C4", "uno:9", "green", [ "v28.8", "h9.3", "v38.4", "h-19.2" ] ]
+  ],
+  "dependencies": {}
+}
